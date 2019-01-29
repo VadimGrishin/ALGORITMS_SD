@@ -193,3 +193,5 @@ def mem_review(func_name, var_names, cur_var):
 sbetween_maxmin_source([i%10 for i in range(0, 2*10**3)])
 sbetween_maxmin_af([i%10 for i in range(0, 2*10**3)])
 sbetween_maxmin_rec([i%10 for i in range(0, 2*10**3)])
+
+# Вывод: 2-я функция опять всех победила. Рекурсия и здесь отстает
