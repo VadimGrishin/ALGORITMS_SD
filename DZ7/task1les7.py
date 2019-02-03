@@ -5,15 +5,16 @@ from random import randint
 
 array = [randint(-100, 99) for i in range(15)]
 print(array)
-n = 1
-while n < len(array):
-    permut_count = 0
-    for i in range(len(array) - n):  # нет смысла проверять уже всплывшие пузырьки
-        if array[i] > array[i + 1]:
-            array[i], array[i + 1] = array[i + 1], array[i]
-            permut_count += 1        
-    if permut_count == 0:  # заканчиваем, если ничего не всплыло
-        break
-    n += 1
+def bubble(array):
+    n = 1
+    while n < len(array):
+        permut_count = 0
+        for i in range(len(array) - n):  # нет смысла проверять уже всплывшие пузырьки
+            if array[i] > array[i + 1]:
+                array[i], array[i + 1] = array[i + 1], array[i]
+                permut_count += 1        
+        if permut_count == 0:  # заканчиваем, если ничего не всплыло
+            break
+        n += 1
 
-print(array)
+print(bubble(array))
