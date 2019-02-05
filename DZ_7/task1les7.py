@@ -12,7 +12,7 @@ def bubble(arr):
     while n < len(arr):
         permut_count = 0
         for i in range(len(arr) - n):  # нет смысла проверять уже всплывшие пузырьки
-            if arr[i] > arr[i + 1]:
+            if arr[i] < arr[i + 1]:
                 arr[i], arr[i + 1] = arr[i + 1], arr[i]
                 permut_count += 1
         if permut_count == 0:  # заканчиваем, если ничего не всплыло
